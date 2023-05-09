@@ -1,9 +1,11 @@
+import Header from '@/components/CompositeComponents/Header/Header'
+
 import styles from './page.module.css'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Hola Mundo</h1>
+      <Header username='Luisina' welcomeMessage='Tomemos Tere' />
     </main>
   )
 }

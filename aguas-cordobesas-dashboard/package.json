@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "format": "prettier --write .",
+    "format": "prettier --write src",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx ."
   },
   "dependencies": {

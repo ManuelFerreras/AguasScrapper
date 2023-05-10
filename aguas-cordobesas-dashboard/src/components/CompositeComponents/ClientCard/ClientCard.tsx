@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Variant, VariantEnum } from '@/common/Types'
+import { Client, Variant, VariantEnum } from '@/common/Types'
 
 import Button from '@/components/BaseComponents/Button/Button'
 import LegendLabel from '@/components/BaseComponents/LegendLabel/LegendLabel'
@@ -7,22 +7,12 @@ import LegendLabel from '@/components/BaseComponents/LegendLabel/LegendLabel'
 import styles from './ClientCard.module.css'
 
 interface ClientCardProps {
-  id: number
-  name: string
-  agId: number
-  ultimaDeuda: string
-  utlimoPeriodo: string
-  vtoUltimoPeriodo: string
+  client: Client
   variant: Variant
 }
 
 const ClientCard: FC<ClientCardProps> = ({
-  id,
-  name,
-  agId,
-  ultimaDeuda,
-  utlimoPeriodo,
-  vtoUltimoPeriodo,
+  client,
   variant
 }) => {
   return (
@@ -30,31 +20,31 @@ const ClientCard: FC<ClientCardProps> = ({
       <div className={`${styles.clientCardColumn}`}>
         <LegendLabel variant={VariantEnum.primary}>#</LegendLabel>
         <LegendLabel variant={VariantEnum.secondary}>
-          {id.toString()}
+          {client.id.toString()}
         </LegendLabel>
       </div>
 
       <div className={`${styles.clientCardColumn}`}>
         <LegendLabel variant={VariantEnum.primary}>Name</LegendLabel>
-        <LegendLabel variant={VariantEnum.secondary}>{name}</LegendLabel>
+        <LegendLabel variant={VariantEnum.secondary}>{client.name}</LegendLabel>
       </div>
 
       <div className={`${styles.clientCardColumn}`}>
         <LegendLabel variant={VariantEnum.primary}>AG ID</LegendLabel>
         <LegendLabel variant={VariantEnum.secondary}>
-          {agId.toString()}
+          {client.agId.toString()}
         </LegendLabel>
       </div>
 
       <div className={`${styles.clientCardColumn}`}>
         <LegendLabel variant={VariantEnum.primary}>Ultima Deuda</LegendLabel>
-        <LegendLabel variant={VariantEnum.secondary}>{ultimaDeuda}</LegendLabel>
+        <LegendLabel variant={VariantEnum.secondary}>{client.ultimaDeuda}</LegendLabel>
       </div>
 
       <div className={`${styles.clientCardColumn}`}>
         <LegendLabel variant={VariantEnum.primary}>Ultimo Periodo</LegendLabel>
         <LegendLabel variant={VariantEnum.secondary}>
-          {utlimoPeriodo}
+          {client.utlimoPeriodo}
         </LegendLabel>
       </div>
 
@@ -63,7 +53,7 @@ const ClientCard: FC<ClientCardProps> = ({
           Vto. Ultimo Periodo
         </LegendLabel>
         <LegendLabel variant={VariantEnum.secondary}>
-          {vtoUltimoPeriodo}
+          {client.vtoUltimoPeriodo}
         </LegendLabel>
       </div>
 

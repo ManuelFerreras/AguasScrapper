@@ -16,24 +16,28 @@ interface StorybookTemplate extends FC<ClientCardProps> {
 
 const Template: StorybookTemplate = (args) => <ClientCard {...args} />
 
-export const LightCard = Template.bind({})
-LightCard.args = {
-  id: 1,
-  name: 'Manuel Ferreras',
-  agId: 469646,
-  ultimaDeuda: '$ 500.00',
-  utlimoPeriodo: '05/2023',
-  vtoUltimoPeriodo: '05/10/2023',
+export const DarkCard = Template.bind({})
+DarkCard.args = {
+  client: {
+    id: 1,
+    name: 'Manuel Ferreras',
+    agId: 469646,
+    ultimaDeuda: '$ 500.00',
+    utlimoPeriodo: '05/2023',
+    vtoUltimoPeriodo: '05/10/2023'
+  },
   variant: VariantEnum.primary
 }
 
-export const DarkCard = Template.bind({})
-DarkCard.args = {
-  id: 2,
-  name: 'Luisina',
-  agId: 463646,
-  ultimaDeuda: '$ 502.00',
-  utlimoPeriodo: '05/2023',
-  vtoUltimoPeriodo: '05/20/2023',
+export const LightCard = Template.bind({})
+LightCard.args = {
+  client: {
+    id: 2,
+    name: 'Luisina',
+    agId: 463646,
+    ultimaDeuda: '$ 502.00',
+    utlimoPeriodo: '05/2023',
+    vtoUltimoPeriodo: '05/20/2023'
+  },
   variant: VariantEnum.secondary
 }

@@ -4,13 +4,13 @@
   font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
   text-transform: uppercase;
   color: var(--primary-font-color);
   padding: 6px 0;
-  height: 40px;
-  min-width: 112px;
+  height: 36px;
+  min-width: 100px;
   cursor: pointer;
 }
 

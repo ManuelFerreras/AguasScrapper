@@ -11,10 +11,7 @@ interface ClientCardProps {
   variant: Variant
 }
 
-const ClientCard: FC<ClientCardProps> = ({
-  client,
-  variant
-}) => {
+const ClientCard: FC<ClientCardProps> = ({ client, variant }) => {
   return (
     <div className={`${styles.clientCard} ${styles[variant]}`}>
       <div className={`${styles.clientCardColumn}`}>
@@ -38,7 +35,9 @@ const ClientCard: FC<ClientCardProps> = ({
 
       <div className={`${styles.clientCardColumn}`}>
         <LegendLabel variant={VariantEnum.primary}>Ultima Deuda</LegendLabel>
-        <LegendLabel variant={VariantEnum.secondary}>{client.ultimaDeuda}</LegendLabel>
+        <LegendLabel variant={VariantEnum.secondary}>
+          {client.ultimaDeuda}
+        </LegendLabel>
       </div>
 
       <div className={`${styles.clientCardColumn}`}>

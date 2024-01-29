@@ -1,21 +1,23 @@
+import dbConnect from '@/lib/mongodb';
 import { ClientModel } from '@/schemas/Client.schema';
-import { initMongo } from '@/util/mongoUtil'
 import { NextResponse } from 'next/server'
 
-(initMongo())()
+export async function route(req: any, res: any) {
+    await dbConnect()
+}
  
-export async function POST() {
+// export async function POST() {
 
-    const clientToUpload = new ClientModel({
-        agId: 1
-    })
+//     const clientToUpload = new ClientModel({
+//         agId: 1
+//     })
 
-    await clientToUpload.save()
+//     await clientToUpload.save()
 
-    return NextResponse.json({ message: 'User Created' }) 
-}
+//     return NextResponse.json({ message: 'User Created' }) 
+// }
 
-export async function GET() {
-    const getResult = await ClientModel.find({})
-    return NextResponse.json({ clients: getResult})
-}
+// export async function GET() {
+//     const getResult = await ClientModel.find({})
+//     return NextResponse.json({ clients: getResult})
+// }
